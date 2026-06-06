@@ -34,6 +34,7 @@ public class Main {
         }
         */
 
+        // versao for(each)  mais simples quando nao preciso usa o index como regra de controle
         System.out.println("N° negativos!! ");
         for (int num : vetor) {
             if (num < 0) {
