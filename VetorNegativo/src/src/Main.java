@@ -18,18 +18,35 @@ public class Main {
             vetor[i] = sc.nextInt();
         }
 
+
+        /*
         System.out.println("N° negativos!! ");
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] < 0) {
                 System.out.println(vetor[i]);
             }
         }
-
         System.out.println("N° Positivos!! ");
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] > 0) {
                 System.out.println(vetor[i]);
             }
         }
+        */
+
+        System.out.println("N° negativos!! ");
+        for (int num : vetor) {
+            if (num < 0) {
+                System.out.println(num);
+            }
+        }
+
+        System.out.println("N° Positivos!! ");
+        for (int num : vetor) {
+            if (num > 0) {
+                System.out.println(num);
+            }
+        }
+        sc.close();
     }
 }
