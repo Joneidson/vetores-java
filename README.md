@@ -27,13 +27,7 @@ Vetores (arrays)
 | 02 | soma_vetor | soma e media | ✅ |
 | 03 | numeros_pares | filtro de pares + contador | ✅ |
 | 04 | maior_posicao | maior valor com vetor de objetos | ✅ |
-| 05 | soma_vetores | dois vetores → terceiro | ⏳ |
-| 06 | abaixo_da_media | comparar com media | ⏳ |
-| 07 | media_pares | media condicional | ⏳ |
-| 08 | mais_velho | dois vetores paralelos | ⏳ |
-| 09 | aprovados | tres vetores paralelos | ⏳ |
-| 10 | alturas | multiplos dados por pessoa | ⏳ |
-| 11 | dados_pessoas | maior, menor, media por genero | ⏳ |
+| 05 | soma_vetores | dois vetores → terceiro | ✅ |
 
 ---
 
