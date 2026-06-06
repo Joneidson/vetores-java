@@ -1,6 +1,6 @@
 # 📦 Vetores Java
 
-Exercícios de fixação sobre vetores e arrays em Java.  
+Exercicios de fixacao sobre vetores e arrays em Java.
 Parte da trilha de estudos de **POO com Java**.
 
 ---
@@ -9,31 +9,31 @@ Parte da trilha de estudos de **POO com Java**.
 
 ```
 Vetores (arrays)
-├── Declaração e instanciação
+├── Declaracao e instanciacao
 ├── Preenchimento com for
 ├── for tradicional vs for-each
 ├── Vetores de primitivos (int, double)
-├── Vetores de objetos (Product, Pessoa...)
-└── Filtros, somas, médias e comparações
+├── Vetores de objetos (Numero, Produto...)
+└── Filtros, somas, medias e comparacoes
 ```
 
 ---
 
-## 📋 Exercícios
+## 📋 Exercicios
 
-| # | Problema | Conceito principal |
-|---|---|---|
-| 01 | negativos | filtro com `if` + for-each |
-| 02 | soma_vetor | soma e média |
-| 03 | numeros_pares | filtro de pares |
-| 04 | maior_posicao | achar maior valor e índice |
-| 05 | soma_vetores | dois vetores → terceiro |
-| 06 | abaixo_da_media | comparar com média |
-| 07 | media_pares | média condicional |
-| 08 | mais_velho | dois vetores paralelos |
-| 09 | aprovados | três vetores paralelos |
-| 10 | alturas | múltiplos dados por pessoa |
-| 11 | dados_pessoas | maior, menor, média por gênero |
+| # | Problema | Conceito principal | Status |
+|---|---|---|---|
+| 01 | negativos | filtro com `if` + for-each | ✅ |
+| 02 | soma_vetor | soma e media | ✅ |
+| 03 | numeros_pares | filtro de pares + contador | ✅ |
+| 04 | maior_posicao | maior valor com vetor de objetos | ✅ |
+| 05 | soma_vetores | dois vetores → terceiro | ⏳ |
+| 06 | abaixo_da_media | comparar com media | ⏳ |
+| 07 | media_pares | media condicional | ⏳ |
+| 08 | mais_velho | dois vetores paralelos | ⏳ |
+| 09 | aprovados | tres vetores paralelos | ⏳ |
+| 10 | alturas | multiplos dados por pessoa | ⏳ |
+| 11 | dados_pessoas | maior, menor, media por genero | ⏳ |
 
 ---
 
@@ -41,6 +41,9 @@ Vetores (arrays)
 
 ```
 vetores-java/
+├── VetorNegativo/
+│    └── src/
+│         └── Main.java
 ├── VetorSimples/
 │    └── src/
 │         └── Main.java
@@ -49,6 +52,17 @@ vetores-java/
 │         ├── Main.java
 │         └── entidade/
 │              └── Produto.java
+├── VetorSoma/
+│    └── src/
+│         └── Main.java
+├── Vetor_numeros_Pares/
+│    └── src/
+│         └── Main.java
+├── Vetor_Maior_Posicao/
+│    └── src/
+│         ├── Main.java
+│         └── entidade/
+│              └── Numero.java
 └── README.md
 ```
 
@@ -58,12 +72,12 @@ vetores-java/
 
 **For tradicional vs For-each**
 ```java
-// usar quando precisa do índice
+// usar quando precisa do indice (preenchimento)
 for (int i = 0; i < vetor.length; i++) {
     vetor[i] = sc.nextInt();
 }
 
-// usar quando só precisa do valor
+// usar quando so precisa do valor (leitura/filtro)
 for (int num : vetor) {
     System.out.println(num);
 }
@@ -71,12 +85,34 @@ for (int num : vetor) {
 
 **Vetor de primitivos vs vetor de objetos**
 ```java
-// primitivo — posições já prontas
+// primitivo — posicoes ja prontas com valor padrao
 int[] numeros = new int[5];
 
-// objeto — cada posição começa null
+// objeto — cada posicao comeca null, precisa instanciar
 Produto[] produtos = new Produto[5];
-produtos[0] = new Produto("TV", 900.0); // precisa instanciar
+produtos[0] = new Produto("TV", 900.0);
+```
+
+**Achar o maior valor**
+```java
+Numero maior = vect[0]; // assume o primeiro como maior
+
+for (Numero n : vect) {
+    if (n.getValor() > maior.getValor()) {
+        maior = n; // atualiza se achar um maior
+    }
+}
+```
+
+**Filtrar com contador**
+```java
+int contador = 0;
+for (int num : vect) {
+    if (num % 2 == 0) {   // verifica condicao
+        System.out.print(num + " ");
+        contador++;        // conta os que passaram
+    }
+}
 ```
 
 ---
